@@ -9,8 +9,6 @@ const productDetailsCloseIcon = document.querySelector('.product-detail-close');
 const cardsContainer = document.querySelector('.cards-container');
 const productDetailContainer = document.querySelector('#productDetail');
 
-// const productDetailImg = document.querySelector('#productDetail');
-
 menuEmail.addEventListener('click', toggleDestopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
 menuCarritoIcon.addEventListener('click', toggleCarritoAside);
@@ -64,9 +62,8 @@ function openProductDetailAside(){
 
 function closeProductDetailAside(){
     productDetailContainer.classList.add('inactive');
-    productDetailImg.removeAttribute('src');
-}
 
+}
 
 /*Lista de productos */
 const productList = [];
@@ -137,7 +134,7 @@ function renderProducts(arr){
 
         //product = {name, price, image} -> product.image
         const productImg = document.createElement('img');
-        productImg.setAttribute('src',product.image);
+        productImg.setAttribute('src', product.image);
         productImg.addEventListener('click',openProductDetailAside);
 
         const productInfo = document.createElement('div');
